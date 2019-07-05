@@ -23,7 +23,7 @@ class ModalView: UIView {
     func setUpView() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
-        
+
         self.contentView = nib.instantiate(withOwner: self, options: nil).first as? UIView
         addSubview(contentView)
         
