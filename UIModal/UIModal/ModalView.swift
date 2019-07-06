@@ -10,6 +10,7 @@ public class ModalView: UIView {
 
     let nibName = "ModalView"
     var contentView: UIView!
+    var timer: Timer?
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,6 +20,18 @@ public class ModalView: UIView {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpView()
+    }
+    
+    public func set(image: UIImage) {
+        self.statusImage.image = image
+    }
+    
+    public func set(heading text: String) {
+        self.headingLabel.text = text
+    }
+    
+    public func set(subheading text: String) {
+        self.subheadingLabel.text = text
     }
 
     private func setUpView() {
@@ -36,22 +49,24 @@ public class ModalView: UIView {
         subheadingLabel.text = ""
     }
     
-    public func set(image: UIImage) {
-        self.statusImage.image = image
-    }
-    
-    public func set(heading text: String) {
-        self.headingLabel.text = text
-    }
-    
-    public func set(subheading text: String) {
-        self.subheadingLabel.text = text
-    }
-    
     public override func layoutSubviews() {
         self.layoutIfNeeded()
         self.contentView.layer.masksToBounds = true
         self.contentView.clipsToBounds = true
         self.contentView.layer.cornerRadius = 10
+    }
+    
+    public override func didMoveToSuperview() {
+        self.timer = Timer.scheduledTimer(
+            timeInterval: TimeInterval(3.0),
+            target: self,
+            selector: #selector(self.dismiss),
+            userInfo: nil,
+            repeats: false
+        )
+    }
+    
+    @objc private func dismiss() {
+        
     }
 }
