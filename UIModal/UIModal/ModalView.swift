@@ -67,6 +67,6 @@ public class ModalView: UIView {
     }
     
     @objc private func dismiss() {
-        
+        self.removeFromSuperview()
     }
 }
