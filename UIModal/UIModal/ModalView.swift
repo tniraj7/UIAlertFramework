@@ -47,4 +47,11 @@ public class ModalView: UIView {
     public func set(subheading text: String) {
         self.subheadingLabel.text = text
     }
+    
+    public override func layoutSubviews() {
+        self.layoutIfNeeded()
+        self.contentView.layer.masksToBounds = true
+        self.contentView.clipsToBounds = true
+        self.contentView.layer.cornerRadius = 10
+    }
 }
