@@ -20,5 +20,9 @@ alertView(subheading: String)
 alertView(image: image)
 view.addSubview(alertView)  
 ```
+
+### Preview
+![](UIAlert.gif)
+
 ### Contributing
 Pull requests are welcome.
