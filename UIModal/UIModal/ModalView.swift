@@ -1,6 +1,6 @@
 import UIKit
 
-class ModalView: UIView {
+public class ModalView: UIView {
 
     @IBOutlet private weak var statusImage: UIImageView!
     @IBOutlet private weak var headingLabel: UILabel!
@@ -21,7 +21,7 @@ class ModalView: UIView {
         setUpView()
     }
 
-    func setUpView() {
+    private func setUpView() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
 
@@ -34,5 +34,17 @@ class ModalView: UIView {
 
         headingLabel.text = ""
         subheadingLabel.text = ""
+    }
+    
+    public func set(image: UIImage) {
+        self.statusImage.image = image
+    }
+    
+    public func set(heading text: String) {
+        self.headingLabel.text = text
+    }
+    
+    public func set(subheading text: String) {
+        self.subheadingLabel.text = text
     }
 }
