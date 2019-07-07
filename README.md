@@ -8,7 +8,7 @@
     . Go to Embedded Binaries and click '+', you can see the project that you added, select it
       to add to embedded binaries.
 ### Install via Pod
-Download an place the [Pod](https://github.com/tniraj7/UIAlertPod) at the root of your project
+#### Download an place the [Pod](https://github.com/tniraj7/UIAlertPod) at the root of your project
 
 #### Create a podfile at the root of your project using below command
 ```
