@@ -1,7 +1,7 @@
 # UIAlertFramework
 ## A custom framework to show alert on certain events
 
-### Installation
+### Installation through Xcode
     . Select 'General' tab in project inspector
     . In 'Embedded Binaries' section, click '+', then 'Add Other'
     . Choose 'UIAlertFramework.xcodeproj, it will add up to project navigator
