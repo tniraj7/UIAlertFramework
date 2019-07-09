@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalView" customModule="UIModal" customModuleProvider="target">
+            <connections>
+                <outlet property="headingLabel" destination="APw-IW-R6J" id="NJc-AU-DqW"/>
+                <outlet property="statusImage" destination="Eel-tN-V7G" id="rLh-Q3-OHL"/>
+                <outlet property="subheadingLabel" destination="l9R-Jk-wlv" id="cRd-yt-tiz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="Dyi-Wl-jFR">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W9v-ng-9DB">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eel-tN-V7G">
+                        <rect key="frame" x="50" y="10" width="120" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="fiu-Km-cIz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subheading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9R-Jk-wlv">
+                        <rect key="frame" x="40" y="195" width="140" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="zhi-g0-ug4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APw-IW-R6J">
+                        <rect key="frame" x="40" y="160" width="140" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ibL-Oa-1jy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l9R-Jk-wlv" firstAttribute="top" secondItem="APw-IW-R6J" secondAttribute="bottom" constant="5" id="3zZ-YF-Iyi"/>
+                    <constraint firstItem="l9R-Jk-wlv" firstAttribute="centerX" secondItem="W9v-ng-9DB" secondAttribute="centerX" id="931-cv-Ngn"/>
+                    <constraint firstItem="APw-IW-R6J" firstAttribute="leading" secondItem="W9v-ng-9DB" secondAttribute="leading" constant="40" id="Ldn-HM-Lj6"/>
+                    <constraint firstItem="l9R-Jk-wlv" firstAttribute="leading" secondItem="W9v-ng-9DB" secondAttribute="leading" constant="40" id="RmI-J4-QY7"/>
+                    <constraint firstAttribute="trailing" secondItem="APw-IW-R6J" secondAttribute="trailing" constant="40" id="Rv9-hx-4tV"/>
+                    <constraint firstItem="Eel-tN-V7G" firstAttribute="leading" secondItem="W9v-ng-9DB" secondAttribute="leading" constant="50" id="T3K-an-HHG"/>
+                    <constraint firstAttribute="trailing" secondItem="Eel-tN-V7G" secondAttribute="trailing" constant="50" id="Wm5-dQ-Euh"/>
+                    <constraint firstItem="APw-IW-R6J" firstAttribute="centerX" secondItem="W9v-ng-9DB" secondAttribute="centerX" id="bnz-0v-QCM"/>
+                    <constraint firstItem="APw-IW-R6J" firstAttribute="top" secondItem="Eel-tN-V7G" secondAttribute="bottom" constant="20" id="jLp-rb-s4d"/>
+                    <constraint firstItem="Eel-tN-V7G" firstAttribute="top" secondItem="W9v-ng-9DB" secondAttribute="top" constant="10" id="qWM-11-YyM"/>
+                    <constraint firstItem="Eel-tN-V7G" firstAttribute="centerX" secondItem="W9v-ng-9DB" secondAttribute="centerX" id="rtR-Ym-jI0"/>
+                    <constraint firstAttribute="trailing" secondItem="l9R-Jk-wlv" secondAttribute="trailing" constant="40" id="s35-F0-C7l"/>
+                </constraints>
+            </view>
+            <blurEffect style="light"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </visualEffectView>
+    </objects>
+</document>
